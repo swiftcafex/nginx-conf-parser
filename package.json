@@ -1,12 +1,19 @@
 {
   "name": "nginx-conf-parser",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "nginx config file parser",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo && nyc ava",
+    "coveralls": "nyc report --reporter=text-lcov | converalls"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "xiangping",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "coveralls": "^3.0.0",
+    "nyc": "^11.2.1",
+    "xo": "^0.18.2"
+  }
 }
