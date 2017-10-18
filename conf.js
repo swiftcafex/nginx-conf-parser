@@ -1,3 +1,5 @@
+'use strict';
+
 const Conf = function () {
 	this.user = null;
 	this.workProcesses = null;
