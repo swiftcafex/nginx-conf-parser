@@ -1,16 +1,17 @@
+'use strict';
+
 import test from 'ava';
 import confParser from '../conf-parser';
 
 const fs = require('fs');
 
 const exmaplePath = './test/support/example.conf';
-test('parse config file', t => {
+test('parse config file', async t => {
 	await (function () {
 		return new Promise(resolve => {
-			confParser.parseFile(exmaplePath, function(){
-
-			})
-
+			confParser.parseFile(exmaplePath, () => {
+				resolve();
+			});
 		});
 	});
 	t.pass();
